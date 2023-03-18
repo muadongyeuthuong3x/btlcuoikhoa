@@ -73,7 +73,22 @@ const danhSachLop = [
 // ${} // đây để js nó hiểu là biến
 // truy cập đến object nào của mảng danhSachLop[i]
 // muốn lấy value thì chấm thêm key object
+const divP1 = document.createElement("div")
+let pDiv = '';
 for(let i = 0 ; i <danhSachLop.length ; i++){
-    document.write(`<h2>${danhSachLop[i].name} - ${danhSachLop[i].diem} <br><br/> </h2>`)
+    // += có ngĩa là giá trị pDiv sẽ bằng giá trị cũ + thêm
+    //  <p class="cssdemo"> ${danhSachLop[i].name} - ${danhSachLop[i].diem} 
+    //</p>
+    pDiv  += `
+    <p class="cssdemo"> ${danhSachLop[i].name} - ${danhSachLop[i].diem} 
+    </p>
+   `
+   //``  đây là sử dụng cho biến
+   
 }
+divP1.innerHTML = pDiv  
 
+
+
+document.getElementById("view").appendChild(divP1) 
+// 
